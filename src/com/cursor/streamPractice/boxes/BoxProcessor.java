@@ -18,9 +18,8 @@ public class BoxProcessor {
        return boxCollection.stream()
                 .flatMap(box ->  box.getThings().stream()
                         .filter(Thing::isFragile)
-                        .map(Protector::new)                        )
+                        .map(Protector::new))
                 .collect(Collectors.toList());
-
     }
 
     public boolean areAllFragile(List<Protector> protectorList){
